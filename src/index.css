@@ -69,6 +69,10 @@ body {
   background: linear-gradient(45deg, #0A1A0A, #0F1C26, #1C1C1C, #1A0A1A);
   background-size: 400% 400%;
   animation: gradientBG 6s ease infinite;
+  font-family: "Fjalla One", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #ebe3f6
 }
 
 @keyframes gradientBG {
@@ -82,5 +86,37 @@ body {
 
   100% {
     background-position: 0% 50%;
+  }
+}
+
+/* общий контенер  */
+
+.container {
+  width: 100%;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+
+@media (min-width: 320px) {
+  .container {
+    max-width: 320px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding: 0 20px;
+
+  }
+}
+
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+    padding: 0 30px;
+
   }
 }
