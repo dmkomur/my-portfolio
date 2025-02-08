@@ -6,9 +6,9 @@
         "lib": ["ES2020", "DOM", "DOM.Iterable"],
         "module": "ESNext",
         "skipLibCheck": true,
-        "baseUrl": "./src",
+        "baseUrl": ".", // Изменено с "./src" на "."
         "paths": {
-            "@/*": ["./*"]
+            "@/*": ["src/*"] // Указание правильного пути к src
         },
         "outDir": "./dist",
 

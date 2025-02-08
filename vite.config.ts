@@ -1,23 +1,20 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-import * as path from "path"; // Используем Node.js модуль path
+import path from "path";
 
 export default defineConfig({
     plugins: [react()],
     resolve: {
         alias: {
-            "@": path.resolve(__dirname, "./src"), // Установка алиаса для src
+            "@": path.resolve(__dirname, "src"), // Указание на src
         },
     },
     server: {
-        port: 3000, // Railway использует этот порт по умолчанию
-        host: true, // Позволяет принимать запросы извне
-    },
-    build: {
-        outDir: "dist", // Папка для сборки
+        host: true,
+        port: process.env.PORT ? parseInt(process.env.PORT) : 3000,
     },
     preview: {
-        port: 3000,
         host: true,
+        port: process.env.PORT ? parseInt(process.env.PORT) : 3000,
     },
 });
