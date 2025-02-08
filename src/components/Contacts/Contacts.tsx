@@ -8,8 +8,13 @@ import {
     StyledGitSvg,
     StyledContactsText,
 } from "./Contacts.styled";
+import BackButton from "../Back/BackButton";
 
-const Contacts: React.FC = () => {
+interface NavigationProps {
+    handleGoBack: () => void;
+}
+
+const Contacts: React.FC<NavigationProps> = ({ handleGoBack }) => {
     const textToCopy = "komur.d@gmail.com";
     const handleCopy = async () => {
         try {
@@ -21,6 +26,7 @@ const Contacts: React.FC = () => {
     };
     return (
         <>
+            <BackButton onClick={handleGoBack} as="button" />
             <StyledContactsText>
                 I am a full-stack developer <br />
                 familiar with the following technologies: <br />
