@@ -21,11 +21,12 @@ export const StyledNavContainer = styled.div`
     }
 `;
 
-export const StyledLink = styled(Link)`
+export const StyledLink = styled.div`
     text-decoration: none;
     font-size: 26px;
     color: ${colors.mainWhite};
     transition: color 0.3s ease;
+    cursor: pointer;
 
     &:hover {
         color: ${colors.secondaryLight};
