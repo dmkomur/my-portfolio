@@ -15,7 +15,7 @@ function App() {
                     rotateY: [-3, -10, 0, 2, 2], // Наклон по оси Y
                 }}
                 transition={{
-                    duration: 6, // Длительность одного цикла
+                    duration: 12, // Длительность одного цикла
                     ease: "easeInOut", // Плавные переходы
                     repeat: Infinity, // Бесконечная анимация
                 }}
