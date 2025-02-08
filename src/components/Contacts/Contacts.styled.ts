@@ -75,3 +75,16 @@ export const StyledGitSvg = styled(SvgGit)`
         stroke: ${colors.secondaryLight};
     }
 `;
+
+export const BubbleWrapper = styled.div`
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: ${colors.secondaryLight};
+    color: black;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: opacity 0.5s ease-in-out;
+    pointer-events: none;
+`;

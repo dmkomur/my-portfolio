@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 import {
     StyledContactsHeader,
@@ -7,6 +8,7 @@ import {
     StyledLinkedSvg,
     StyledGitSvg,
     StyledContactsText,
+    BubbleWrapper,
 } from "./Contacts.styled";
 import BackButton from "../Back/BackButton";
 
@@ -16,17 +18,41 @@ interface NavigationProps {
 
 const Contacts: React.FC<NavigationProps> = ({ handleGoBack }) => {
     const textToCopy = "komur.d@gmail.com";
+    const [isBubbleVisible, setIsBubbleVisible] = useState(false);
+
+    const handleCopyClick = () => {
+        setIsBubbleVisible(true);
+        setTimeout(() => {
+            setIsBubbleVisible(false);
+        }, 2000);
+    };
+
     const handleCopy = async () => {
         try {
             await navigator.clipboard.writeText(textToCopy);
-            alert("Текст успешно скопирован! 📋");
+            handleCopyClick();
         } catch (err) {
-            console.error("Ошибка при копировании текста:", err);
+            console.error("cannot copy email", err);
         }
     };
+
     return (
         <>
-            <BackButton onClick={handleGoBack} as="button" />
+            <AnimatePresence>
+                {isBubbleVisible && (
+                    <BubbleWrapper
+                        as={motion.div}
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -20 }}
+                        transition={{ duration: 0.5 }}
+                    >
+                        Email copied
+                    </BubbleWrapper>
+                )}
+            </AnimatePresence>
+
+            <BackButton onClick={handleGoBack} />
             <StyledContactsText>
                 I am a full-stack developer <br />
                 familiar with the following technologies: <br />
