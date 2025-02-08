@@ -11,8 +11,8 @@ function App() {
             <motion.div
                 style={{ minHeight: "100vh" }} // Анимация на весь экран
                 animate={{
-                    rotateX: [0, 2, 0, -20, 0], // Наклон по оси X
-                    rotateY: [0, -10, 0, 2, 0], // Наклон по оси Y
+                    rotateX: [0, 6, 0, -1, 0], // Наклон по оси X
+                    rotateY: [-3, -10, 0, 2, 2], // Наклон по оси Y
                 }}
                 transition={{
                     duration: 6, // Длительность одного цикла
