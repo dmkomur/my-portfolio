@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import breakpoints from "@/tools/breakPoints";
+import breakpoints from "@/tools/breakpoints";
 import colors from "@/tools/colors";
 
 export const StyledGreetings = styled.h2`

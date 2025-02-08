@@ -10,9 +10,7 @@
         "paths": {
             "@/*": ["./*"]
         },
-        "compilerOptions": {
-            "outDir": "./dist"
-        },
+        "outDir": "./dist",
 
         /* Bundler mode */
         "moduleResolution": "bundler",

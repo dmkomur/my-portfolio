@@ -1,7 +1,8 @@
-import React from "react";
+import React, { ReactNode } from "react";
+
 import styled from "styled-components";
 
-import breakpoints from "@/tools/breakPoints";
+import breakpoints from "@/tools/breakpoints";
 
 interface ContainerProps {
     children: ReactNode;

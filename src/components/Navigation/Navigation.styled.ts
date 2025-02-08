@@ -2,9 +2,8 @@ import styled, { keyframes } from "styled-components";
 
 import SvgArrowLink from "./NavArrow";
 
-import breakpoints from "@/tools/breakPoints";
+import breakpoints from "@/tools/breakpoints";
 import colors from "@/tools/colors";
-import { Link } from "react-router-dom";
 
 export const StyledNavContainer = styled.div`
     display: flex;
