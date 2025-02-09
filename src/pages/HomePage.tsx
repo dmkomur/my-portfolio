@@ -2,9 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 
-import CenteredLayout from "@/components/CenteredLayout";
-import StarteredLayout from "@/components/StarteredLayout";
-import Container from "@/components/Container";
+import StartedCenteredContainer from "@/components/StartedCenteredContainer";
 import Greetings from "@/components/Greetings/Greetings";
 import Navigation from "@/components/Navigation/Navigation";
 
@@ -19,37 +17,33 @@ const HomePage: React.FC = () => {
         }, 600);
     };
     return (
-        <Container>
-            <CenteredLayout>
-                <StarteredLayout>
-                    <AnimatePresence>
-                        {isVisible && (
-                            <>
-                                <motion.div
-                                    key="greetings"
-                                    initial={{ opacity: 0, y: -50 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    exit={{ opacity: 0, y: 50 }} // Анимация исчезновения
-                                    transition={{ duration: 0.6 }}
-                                >
-                                    <Greetings />
-                                </motion.div>
+        <StartedCenteredContainer>
+            <AnimatePresence>
+                {isVisible && (
+                    <>
+                        <motion.div
+                            key="greetings"
+                            initial={{ opacity: 0, y: -50 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: 50 }} // Анимация исчезновения
+                            transition={{ duration: 0.6 }}
+                        >
+                            <Greetings />
+                        </motion.div>
 
-                                <motion.div
-                                    key="navigation"
-                                    initial={{ opacity: 0, x: 100 }}
-                                    animate={{ opacity: 1, x: 0 }}
-                                    exit={{ opacity: 0, x: -100 }} // Анимация исчезновения
-                                    transition={{ duration: 0.6 }}
-                                >
-                                    <Navigation onNavigate={handleNavigation} />
-                                </motion.div>
-                            </>
-                        )}
-                    </AnimatePresence>
-                </StarteredLayout>
-            </CenteredLayout>
-        </Container>
+                        <motion.div
+                            key="navigation"
+                            initial={{ opacity: 0, x: 100 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            exit={{ opacity: 0, x: -100 }} // Анимация исчезновения
+                            transition={{ duration: 0.6 }}
+                        >
+                            <Navigation onNavigate={handleNavigation} />
+                        </motion.div>
+                    </>
+                )}
+            </AnimatePresence>
+        </StartedCenteredContainer>
     );
 };
 export default HomePage;

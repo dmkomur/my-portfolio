@@ -62,10 +62,18 @@ const Contacts: React.FC<NavigationProps> = ({ handleGoBack }) => {
             <StyledContactsSvgWrapper>
                 <StyledMailSvg onClick={handleCopy} />
 
-                <a href="https://www.linkedin.com/in/dmytro-komurko-5075a8194/">
+                <a
+                    href="https://www.linkedin.com/in/dmytro-komurko-5075a8194/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
                     <StyledLinkedSvg />
                 </a>
-                <a href="https://github.com/dmkomur?tab=repositories">
+                <a
+                    href="https://github.com/dmkomur?tab=repositories"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
                     <StyledGitSvg />
                 </a>
             </StyledContactsSvgWrapper>

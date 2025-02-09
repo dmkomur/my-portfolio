@@ -11,6 +11,7 @@ export const StyledBackButtonWrapper = styled.div`
     justify-content: flex-end;
     align-items: center;
     margin-bottom: 24px;
+    cursor: pointer;
 `;
 
 export const StyledBackSvg = styled(SvgBack)`
