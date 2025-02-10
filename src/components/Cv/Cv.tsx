@@ -5,10 +5,7 @@ import { StyledCvText, StyledCvWrapper, StyledDownloadSvg } from "./Cv.styled";
 const Cv: React.FC = () => {
     return (
         <>
-            <StyledCvWrapper
-                href="../../assets/cv.pdf"
-                download="cv-komurko.pdf"
-            >
+            <StyledCvWrapper href="/public/cv.pdf" download="cv.pdf">
                 <StyledDownloadSvg />
                 <StyledCvText>click to download my CV</StyledCvText>
             </StyledCvWrapper>
