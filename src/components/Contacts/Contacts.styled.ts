@@ -64,6 +64,7 @@ export const StyledLinkedSvg = styled(SvgLinked)`
     transition: all 0.3s ease-in;
     & :hover {
         fill: ${colors.secondaryLight};
+        transition: all 0.3s ease-in;
     }
 `;
 export const StyledGitSvg = styled(SvgGit)`
@@ -85,6 +86,5 @@ export const BubbleWrapper = styled.div`
     color: black;
     padding: 10px 20px;
     border-radius: 8px;
-    transition: opacity 0.5s ease-in-out;
     pointer-events: none;
 `;
